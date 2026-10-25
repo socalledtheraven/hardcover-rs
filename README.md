@@ -1,12 +1,12 @@
 # hardcover-rs
 
-A strongly typed Rust client library for the [Hardcover](https://hardcover.app/) GraphQL API.
-
-## Features
-
-- **Natural Interface**: Abstracts away querying, authentication, and response parsing.
-- **Typed Data Models:** Rich Rust structs and enums matching Hardcover's schema (Books, Editions, Authors, Users, etc).
-- **Asynchronous API:** Built with Tokio and Reqwest for async network requests.
+- A Rust library for the [Hardcover](https://hardcover.app/) GraphQL API. 
+- Fully asynchronous with tokio and reqwest.
+- Matches the API spec for the data model - it's really easy to convert from an existing query.
+- Handles all the GraphQL and network side of things.
+  - All you have to do is await a constructor and all the data is right there!
+- Doesn't yet support POST requests, editing user libraries or nested requests
+  - i.e. if you want all the books an author has written, you will have to use a for loop (it's coming!)
 
 ## Usage
 
